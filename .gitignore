@@ -1,0 +1,8 @@
+.env
+*.pyc
+dist
+*.egg-info
+*.tar.gz
+*.o
+a.out
+build
