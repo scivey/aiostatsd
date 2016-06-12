@@ -21,7 +21,7 @@ async def go():
     client = StatsdClient("127.0.0.1", 8015)
     asyncio.ensure_future(client.run())
     with client.timer("something", rate=0.1):
-        pass
+        await asyncio.sleep(0.5)
     client.incr("x")
     client.decr("y", 5)
     client.send_gauge("queue_depth", 50)
