@@ -6,3 +6,5 @@ dist
 *.o
 a.out
 build
+MANIFEST
+

@@ -19,7 +19,6 @@ setup(
     packages=[
         'aiostatsd'
     ],
-    ext_modules=STATS_EXT,
     provides=['aiostatsd']
 )
 
