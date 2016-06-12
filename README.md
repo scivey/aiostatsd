@@ -18,7 +18,7 @@ import asyncio
 from aiostatsd.client import StatsdClient
 
 async def go():
-    client = statsd
+    client = StatsdClient("127.0.0.1", 8015)
     asyncio.ensure_future(client.run())
     with client.timer("something", rate=0.1):
         pass
