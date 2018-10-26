@@ -8,7 +8,7 @@ async def queue_get(async_queue, timeout=None):
 
 async def queue_maybe_get(async_queue, timeout=0.1):
     try:
-        return (await queue_get(async_queue))
+        return (await queue_get(async_queue, timeout))
     except asyncio.TimeoutError:
         return None
 
