@@ -1,4 +1,7 @@
 import asyncio
+import logging
+
+logger = logging.getLogger(__name__)
 
 async def queue_get(async_queue, timeout=None):
     result = async_queue.get()
@@ -43,7 +46,7 @@ class ClientProto(asyncio.Protocol):
         self.on_disconnect.set_result(exc)
 
     def error_received(self, err):
-        print('err', err)
+        logger.error(err)
 
 
 class UDPClient(object):
